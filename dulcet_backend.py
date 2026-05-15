@@ -2,7 +2,6 @@ import os
 from dotenv import load_dotenv
 
 load_dotenv()
-os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'
 from flask import Flask, render_template, request, redirect, session, url_for, flash
 from flask_sqlalchemy import SQLAlchemy
 from flask_wtf import FlaskForm
@@ -18,7 +17,7 @@ app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USERNAME'] = 'abenicodecraft001@gmail.com'
 app.config['MAIL_PASSWORD'] = os.getenv('MAIL_PASSWORD')
-app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_ROUTE')
+app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("DATABASE_URL", "sqlite:///dulcet_database.db")
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.secret_key = f"{os.getenv('APP_SECRET_KEY')}"
 google_bp = make_google_blueprint(
@@ -26,8 +25,8 @@ google_bp = make_google_blueprint(
     client_secret=os.getenv("GOOGLE_CLIENT_SECRET"),
     scope=[
         "openid",
-        f"{os.getenv('GO_ROUTE')}",
-        f"{os.getenv('GOO_ROUTE')}",
+        "https://www.googleapis.com/auth/userinfo.email",
+        "https://www.googleapis.com/auth/userinfo.profile",
     ],
     redirect_to="google_login"   # endpoint name
 )
