@@ -23,7 +23,6 @@
     <link rel="stylesheet" href="static/css/bootstrap-datepicker.css">
     <link rel="stylesheet" href="static/css/jquery.timepicker.css">
 
-
     <link rel="stylesheet" href="static/css/flaticon.css">
     <link rel="stylesheet" href="static/css/icomoon.css">
     <link rel="stylesheet" href="static/css/style.css">
@@ -33,7 +32,7 @@
   .home-slider,
   .slider-item {
     height: auto !important;
-    min-height: 60vh; /* reduce height */
+    min-height: 60vh;
   }
 
   .home-slider {
@@ -106,6 +105,11 @@
         max-height: 70vh;
         -webkit-overflow-scrolling: touch;
     }
+}
+
+/* HIDE LOADER */
+#ftco-loader {
+    display: none !important;
 }
        </style>
   </head>
@@ -313,7 +317,7 @@
 			We specialize in a variety of Nigerian dishes made with quality ingredients, rich flavors,
 			and careful attention to taste and hygiene. Whether you're stopping by for a
 			quick meal or a relaxed dining experience, Dulcet Kitchen offers comfort, satisfaction,
-			and a taste you’ll always remember.
+			and a taste you'll always remember.
 		</p>
 
 		<p class="time">
@@ -323,7 +327,7 @@
 			</div>
         </section>
 
-		
+
 		<section class="ftco-section ftco-no-pt bg-light" id="why-us">
   <div class="container">
 
@@ -331,7 +335,7 @@
       <div class="col-md-12 text-center heading-section ftco-animate">
         <span class="subheading">Why Choose Us</span>
         <h2 class="mb-4">Why Customers Love Dulcet Kitchen ❤️</h2>
-        <p>We don’t just cook — we create unforgettable food experiences.</p>
+        <p>We don't just cook — we create unforgettable food experiences.</p>
       </div>
     </div>
 
@@ -432,7 +436,7 @@
                     </div>
                     <div class="media-body p-2 mt-3">
                         <h3 class="heading">Naming Ceremonies</h3>
-                        <p>Celebrate your child’s special day with quality meals and excellent service that brings family and friends together in joy.</p>
+                        <p>Celebrate your child's special day with quality meals and excellent service that brings family and friends together in joy.</p>
                     </div>
                 </div>
             </div>
@@ -1011,7 +1015,6 @@ document.getElementById("reservationForm").addEventListener("submit", function()
 <section class="ftco-section testimony-section" id="review">
   <div class="container">
 
-    <!-- HEADING -->
     <div class="row justify-content-center mb-5">
       <div class="col-md-12 text-center heading-section ftco-animate">
         <span class="subheading">Customer Experience</span>
@@ -1020,14 +1023,12 @@ document.getElementById("reservationForm").addEventListener("submit", function()
       </div>
     </div>
 
-    <!-- ADD REVIEW BUTTON -->
     <div class="text-center mb-5">
       <a href="{{ url_for('add_review') }}" class="btn btn-primary px-4 py-3">
         🍽️ Share Your Experience
       </a>
     </div>
 
-    <!-- REVIEWS CAROUSEL -->
     <div class="row ftco-animate justify-content-center">
       <div class="col-md-12">
         <div class="carousel-testimony owl-carousel ftco-owl">
@@ -1038,7 +1039,6 @@ document.getElementById("reservationForm").addEventListener("submit", function()
             <div class="item">
               <div class="testimony-wrap text-center pb-5">
 
-                <!-- USER IMAGE -->
                 <div class="user-img mb-4"
                      style="background-image: url('{{ r.image }}');
                             width:70px;
@@ -1052,22 +1052,18 @@ document.getElementById("reservationForm").addEventListener("submit", function()
 
                 <div class="text p-3">
 
-                  <!-- STARS -->
                   <div style="color: gold; font-size:16px; margin-bottom:10px;">
                     ★★★★★
                   </div>
 
-                  <!-- REVIEW MESSAGE -->
                   <p class="mb-4" style="font-size:14px;">
                     "{{ r.message }}"
                   </p>
 
-                  <!-- NAME -->
                   <p class="name" style="font-size:16px;">
                     {{ r.name }}
                   </p>
 
-                  <!-- LABEL -->
                   <span class="position" style="font-size:13px;">
                     Verified Customer
                   </span>
@@ -1140,7 +1136,8 @@ document.getElementById("reservationForm").addEventListener("submit", function()
         At Dulcet Kitchen, every meal tells a story of authentic Nigerian flavors.
         From wholesome swallows to savory jollof rice, we craft each dish with care
         to give you a truly delicious dining experience in the heart of Abeokuta.
-    </p>              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
+    </p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
                 <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
                 <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
                 <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
@@ -1165,31 +1162,26 @@ document.getElementById("reservationForm").addEventListener("submit", function()
              <div class="ftco-footer-widget mb-4">
               <h2 class="ftco-heading-2">Instagram</h2>
               <div class="thumb d-sm-flex">
-	            	<a href="#" class="thumb-menu img" style="background-image: url(static/images/asaro.webp);">
-	            	</a>
-	            	<a href="#" class="thumb-menu img" style="background-image: url(static/images/fish.webp);">
-	            	</a>
-	            	<a href="#" class="thumb-menu img" style="background-image: url(static/images/poundo-yam-and-Egusi-soup.webp);">
-	            	</a>
+	            	<a href="#" class="thumb-menu img" style="background-image: url(static/images/asaro.webp);"></a>
+	            	<a href="#" class="thumb-menu img" style="background-image: url(static/images/fish.webp);"></a>
+	            	<a href="#" class="thumb-menu img" style="background-image: url(static/images/poundo-yam-and-Egusi-soup.webp);"></a>
 	            </div>
 	            <div class="thumb d-flex">
-	            	<a href="#" class="thumb-menu img" style="background-image: url(static/images/turkey.avif);">
-	            	</a>
-	            	<a href="#" class="thumb-menu img" style="background-image: url(static/images/eba-1.png);">
-	            	</a>
-	            	<a href="#" class="thumb-menu img" style="background-image: url(static/images/Amala-And-Ewedu.jpg);">
-	            	</a>
+	            	<a href="#" class="thumb-menu img" style="background-image: url(static/images/turkey.avif);"></a>
+	            	<a href="#" class="thumb-menu img" style="background-image: url(static/images/eba-1.png);"></a>
+	            	<a href="#" class="thumb-menu img" style="background-image: url(static/images/Amala-And-Ewedu.jpg);"></a>
 	            </div>
             </div>
           </div>
           <div class="col-md-6 col-lg-3">
             <div class="ftco-footer-widget mb-4">
             	<h2 class="ftco-heading-2">Newsletter</h2>
-  <p>
-    Dulcet Kitchen | Bringing the taste of Abeokuta to your table.
-    Enjoy fresh, flavorful, and affordable Nigerian meals prepared with love for you and your family.
-    Visit us today and experience the true flavors of home.
-</p>              <form action="#" class="subscribe-form">
+              <p>
+                Dulcet Kitchen | Bringing the taste of Abeokuta to your table.
+                Enjoy fresh, flavorful, and affordable Nigerian meals prepared with love for you and your family.
+                Visit us today and experience the true flavors of home.
+              </p>
+              <form action="#" class="subscribe-form">
                 <div class="form-group">
                   <input type="text" class="form-control mb-2 text-center" placeholder="Enter email address">
                   <input type="submit" value="Subscribe" class="form-control submit px-3">
@@ -1198,101 +1190,79 @@ document.getElementById("reservationForm").addEventListener("submit", function()
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-12 text-center">
-
-           <!-- <p> Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0.
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This templates is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-  Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. /p>--><
-          </div>
-        </div>
       </div>
     </footer>
-  
 
-  <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+  <!-- THE LOADER DIV HAS BEEN REMOVED FROM HERE -->
 
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-<!-- SWEETALERT -->
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="static/js/jquery.min.js"></script>
+  <script src="static/js/popper.min.js"></script>
+  <script src="static/js/bootstrap.min.js"></script>
 
-<script src="static/js/jquery.min.js"></script>
-<script src="static/js/popper.min.js"></script>
-<script src="static/js/bootstrap.min.js"></script>
+  <script defer src="static/js/jquery-migrate-3.0.1.min.js"></script>
+  <script defer src="static/js/jquery.easing.1.3.js"></script>
+  <script defer src="static/js/jquery.waypoints.min.js"></script>
+  <script defer src="static/js/jquery.stellar.min.js"></script>
+  <script defer src="static/js/owl.carousel.min.js"></script>
+  <script defer src="static/js/jquery.magnific-popup.min.js"></script>
+  <script defer src="static/js/aos.js"></script>
+  <script defer src="static/js/jquery.animateNumber.min.js"></script>
+  <script defer src="static/js/bootstrap-datepicker.js"></script>
+  <script defer src="static/js/jquery.timepicker.min.js"></script>
+  <script defer src="static/js/scrollax.min.js"></script>
+  <script defer src="static/js/google-map.js"></script>
+  <script defer src="static/js/main.js"></script>
 
-<!-- Load heavy scripts after page renders -->
-<script defer src="static/js/jquery-migrate-3.0.1.min.js"></script>
-<script defer src="static/js/jquery.easing.1.3.js"></script>
-<script defer src="static/js/jquery.waypoints.min.js"></script>
-<script defer src="static/js/jquery.stellar.min.js"></script>
-<script defer src="static/js/owl.carousel.min.js"></script>
-<script defer src="static/js/jquery.magnific-popup.min.js"></script>
-<script defer src="static/js/aos.js"></script>
-<script defer src="static/js/jquery.animateNumber.min.js"></script>
-<script defer src="static/js/bootstrap-datepicker.js"></script>
-<script defer src="static/js/jquery.timepicker.min.js"></script>
-<script defer src="static/js/scrollax.min.js"></script>
-<script defer src="static/js/google-map.js"></script>
-<script defer src="static/js/main.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
 
-<!-- Google Maps loads last, async so it never blocks page -->
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script>
+  $(document).ready(function () {
 
-<script>
-$(document).ready(function () {
+      $('#ftco-nav .nav-link').on('click', function (e) {
 
-    // ── NAVBAR: close + scroll fix ──────────────────────────
-    $('#ftco-nav .nav-link').on('click', function (e) {
+          const href = $(this).attr('href');
+          const isAnchor = href && href.startsWith('#') && href.length > 1;
+          const isOpen   = $('#ftco-nav').hasClass('show');
 
-        const href = $(this).attr('href');
-        const isAnchor = href && href.startsWith('#') && href.length > 1;
-        const isOpen   = $('#ftco-nav').hasClass('show');
+          if (isOpen) {
+              e.preventDefault();
+              $('#ftco-nav').collapse('hide');
 
-        if (isOpen) {
-            e.preventDefault();
-            $('#ftco-nav').collapse('hide');
+              setTimeout(function () {
+                  if (isAnchor && $(href).length) {
+                      const offset = $(href).offset().top - 70;
+                      $('html, body').animate({ scrollTop: offset }, 500);
+                  } else if (href) {
+                      window.location.href = href;
+                  }
+              }, 350);
 
-            setTimeout(function () {
-                if (isAnchor && $(href).length) {
-                    const offset = $(href).offset().top - 70;
-                    $('html, body').animate({ scrollTop: offset }, 500);
-                } else if (href) {
-                    window.location.href = href;
-                }
-            }, 350);
+          } else if (isAnchor && $(href).length) {
+              e.preventDefault();
+              const offset = $(href).offset().top - 70;
+              $('html, body').animate({ scrollTop: offset }, 500);
+          }
 
-        } else if (isAnchor && $(href).length) {
-            // Desktop: still do offset scroll so navbar doesn't cover heading
-            e.preventDefault();
-            const offset = $(href).offset().top - 70;
-            $('html, body').animate({ scrollTop: offset }, 500);
-        }
+      });
 
-    });
+      $(document).on('click', function (e) {
+          if (
+              $('#ftco-nav').hasClass('show') &&
+              !$(e.target).closest('#ftco-navbar').length
+          ) {
+              $('#ftco-nav').collapse('hide');
+          }
+      });
 
-    // Close navbar when tapping outside
-    $(document).on('click', function (e) {
-        if (
-            $('#ftco-nav').hasClass('show') &&
-            !$(e.target).closest('#ftco-navbar').length
-        ) {
-            $('#ftco-nav').collapse('hide');
-        }
-    });
+      $("#reservationForm").on("submit", function () {
+          const btn = $("#submitBtn");
+          btn.prop("disabled", true).val("Processing...");
+      });
 
-    // ── RESERVATION form loading state ──────────────────────
-    $("#reservationForm").on("submit", function () {
-        const btn = $("#submitBtn");
-        btn.prop("disabled", true).val("Processing...");
-    });
-
-});
-</script>
+  });
+  </script>
 
 </body>
-</html>
-</body>
-</html>
-  </body>
 </html>
